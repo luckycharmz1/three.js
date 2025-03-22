@@ -1,0 +1,12 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "I'm currently working on learning three.js <br>I need help with being able to view my project on different devices <br>I expect to learn node.js, React, and mixing HTML with Webgl throughout this proccess of three.js journey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
