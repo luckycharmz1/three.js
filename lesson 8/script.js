@@ -43,7 +43,13 @@ window.addEventListener('resize', () =>
 
 window.addEventListener('dblclick', () =>
 {
-   console.log('double click') 
+    if(!document.fullscreenElement)
+    {
+        console.log('go fulllscreen')
+    }
+    {
+        console.log('double click') 
+    }
 })
 
 /**
