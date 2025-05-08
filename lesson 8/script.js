@@ -22,36 +22,50 @@ scene.add(mesh)
  * Sizes
  */
 const sizes = {
-    width: 800,
-    height: 600
+    width: window.innerWidth,
+    height: window.innerHeight
 }
 
 window.addEventListener('resize', () => 
 {
-    //update sizes
+    // Update sizes
     sizes.width = window.innerWidth
-    sizes.width = window.innerHeight
+    sizes.height = window.innerHeight
 
-    //update camera
+    // Update camera
     camera.aspect = sizes.width / sizes.height
-    camera.updateProjectMatrix()
+    camera.updateProjectionMatrix()
 
-    //update renderer
+    // Update renderer
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
 window.addEventListener('dblclick', () =>
 {
-    const fullscreenElement = document.fullscreenElement || document.webkitfullscreenElement
+    const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
 
-    if(!document.fullscreenElement)
+    if(!fullscreenElement)
     {
-        canvas.requestFullscreen()
+        if(canvas.requestFullscreen)
+        {
+            canvas.requestFullscreen()
+        }
+        else if(canvas.webkitRequestFullscreen)
+        {
+            canvas.webkitRequestFullscreen()
+        }
     }
     else
     {
-        document.exitFullscreen()
+        if(document.exitFullscreen)
+        {
+            document.exitFullscreen()
+        }
+        else if(document.webkitExitFullscreen)
+        {
+            document.webkitExitFullscreen()
+        }
     }
 })
 
@@ -75,6 +89,7 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
 /**
  * Animate
  */
