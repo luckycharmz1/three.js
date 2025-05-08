@@ -41,6 +41,11 @@ window.addEventListener('resize', () =>
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
+window.addEventListener('dblclick', () =>
+{
+   console.log('double click') 
+})
+
 /**
  * Camera
  */
