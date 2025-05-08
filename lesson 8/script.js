@@ -45,8 +45,9 @@ window.addEventListener('dblclick', () =>
 {
     if(!document.fullscreenElement)
     {
-        console.log('go fulllscreen')
+        canvas.requestFullscreen()
     }
+    else
     {
         console.log('double click') 
     }
