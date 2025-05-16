@@ -1,3 +1,4 @@
+import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
@@ -89,6 +90,11 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.25))
+
+//Added my own code
+canvas.style.width = '100vw'
+canvas.style.height = '100vh'
+
 
 /**
  * Animate
