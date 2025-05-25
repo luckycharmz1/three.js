@@ -20,7 +20,7 @@ const scene = new THREE.Scene()
  * Object
  */
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
-const material = new THREE.MeshBasicMaterial({ color: '#ff0000' })
+const material = new THREE.MeshBasicMaterial({ color: '#3a0458' })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
@@ -35,7 +35,15 @@ gui
     .add(mesh, 'visble')
 
 gui
-    .add(Material, 'wireframe')
+    .add(mesh.material, 'wireframe')
+
+gui
+    .addColor(material, 'color')
+    .onChange(() =>
+    {
+        console.log(material.color)
+        console.log(value)
+    })
 
 /**
  * Sizes
