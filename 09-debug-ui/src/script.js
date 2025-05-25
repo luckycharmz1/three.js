@@ -33,6 +33,10 @@ gui
 let myVariable = 1337
 gui.add(myVariable, '???')
 
+const myObject = {
+    myVariable: 1337
+}
+gui.add(myObject, 'myVariable')
 
 /**
  * Sizes
