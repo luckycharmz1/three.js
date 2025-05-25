@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import gsap from 'gsap'
 import GUI from 'lil-gui'
+import { MaterialLoader } from 'three'
 
 //Debug
 const gui = new GUI()
@@ -30,13 +31,11 @@ gui
     .step(0.01)
     .name('elevation')
 
-let myVariable = 1337
-gui.add(myVariable, '???')
+gui
+    .add(mesh, 'visble')
 
-const myObject = {
-    myVariable: 1337
-}
-gui.add(myObject, 'myVariable')
+gui
+    .add(Material, 'wireframe')
 
 /**
  * Sizes
