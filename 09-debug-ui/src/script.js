@@ -53,6 +53,13 @@ debugObject.spin = () =>
 }
 gui.add(debugObject, 'spin')
 
+debugObject.subdivision = 2
+gui
+    .add(debugObject, 'subdivision')
+    .min(1)
+    .max(20)
+    .step(1)
+
 /**
  * Sizes
  */
