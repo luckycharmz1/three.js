@@ -38,7 +38,7 @@ gui
     .add(mesh, 'visble')
 
 gui
-    .add(mesh.material, 'wireframe')
+    .add(material, 'wireframe')
 
 gui
     .addColor(material, 'color')
