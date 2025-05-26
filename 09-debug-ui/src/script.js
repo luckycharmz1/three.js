@@ -47,6 +47,11 @@ gui
         material.color.set(debugObject.color)
     })
 
+debugObject.spin = () =>
+{
+     
+}
+
 /**
  * Sizes
  */
