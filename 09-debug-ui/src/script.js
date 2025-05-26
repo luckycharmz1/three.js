@@ -23,7 +23,7 @@ const scene = new THREE.Scene()
 debugObject.color = '#a778dB'
 
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
-const material = new THREE.MeshBasicMaterial({ color: debugObject.color })
+const material = new THREE.MeshBasicMaterial({ color: debugObject.color, wireframe: true })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
