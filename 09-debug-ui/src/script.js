@@ -49,8 +49,9 @@ gui
 
 debugObject.spin = () =>
 {
-     
+     gsap.to(mesh.rotation, {y: mesh.rotation.y + Math.PI * 2})
 }
+gui.add(debugObject, 'spin')
 
 /**
  * Sizes
