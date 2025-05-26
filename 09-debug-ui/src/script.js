@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import gsap from 'gsap'
 import GUI from 'lil-gui'
-import { MaterialLoader } from 'three'
+import { DetachedBindMode, MaterialLoader } from 'three'
 
 //Debug
 const gui = new GUI()
@@ -59,9 +59,12 @@ gui
     .min(1)
     .max(20)
     .step(1)
-    .onChange(() =>
+    .onFinishChange(() =>
     {
-        console.log('subdivision changed')
+        mesh.geometry = new THREE.BoxGeometry(
+            1, 1, 1,
+            debugObject.subdivision, debugObject.subdivision, debugObject.subdivision
+        )
     })
 
 /**
