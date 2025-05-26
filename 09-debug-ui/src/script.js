@@ -6,6 +6,7 @@ import { MaterialLoader } from 'three'
 
 //Debug
 const gui = new GUI()
+const debugObject = {}
 
 /**
  * Base
@@ -19,6 +20,8 @@ const scene = new THREE.Scene()
 /**
  * Object
  */
+debugObject.color = '#3a6ae6'
+
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
 const material = new THREE.MeshBasicMaterial({ color: '#3a0458' })
 const mesh = new THREE.Mesh(geometry, material)
@@ -41,8 +44,7 @@ gui
     .addColor(material, 'color')
     .onChange(() =>
     {
-        console.log(material.color)
-        console.log(value)
+        console.log(value.getHexString())
     })
 
 /**
