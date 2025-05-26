@@ -59,6 +59,10 @@ gui
     .min(1)
     .max(20)
     .step(1)
+    .onChange(() =>
+    {
+        console.log('subdivision changed')
+    })
 
 /**
  * Sizes
