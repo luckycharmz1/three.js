@@ -1,10 +1,16 @@
 import * as THREE from 'three'
+import { ImageLoader } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-//import imageSource from './color.jpg'
 
-//console.log('Image source:', imageSource)
+/**
+ * Textures
+ */
+const image = new Image()
 
-
+image.onload = () =>
+{
+    
+}
 
 /**
  * Base
